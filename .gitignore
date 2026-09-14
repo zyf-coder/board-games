@@ -9,4 +9,3 @@ dist/
 output/
 scrape.py
 www/
-*.apk
