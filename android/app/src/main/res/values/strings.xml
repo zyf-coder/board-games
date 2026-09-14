@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">楚河棋局</string>
+    <string name="title_activity_main">楚河棋局</string>
+    <string name="package_name">com.zyf.boardgames</string>
+    <string name="custom_url_scheme">com.zyf.boardgames</string>
+</resources>

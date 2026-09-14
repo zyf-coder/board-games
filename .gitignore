@@ -8,3 +8,5 @@ dist/
 .cache/
 output/
 scrape.py
+www/
+*.apk
