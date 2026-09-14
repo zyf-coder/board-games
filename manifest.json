@@ -1,0 +1,25 @@
+{
+  "name": "楚河棋局 · 中国象棋",
+  "short_name": "楚河棋局",
+  "description": "手机可玩的中国象棋，支持双人对战与简单 AI",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1a120b",
+  "theme_color": "#1a120b",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

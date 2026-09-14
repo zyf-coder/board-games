@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a120b" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>楚河棋局 · 中国象棋</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="brand">
+        <span class="brand-mark">棋</span>
+        <div>
+          <h1>楚河棋局</h1>
+          <p class="sub">中国象棋 · 双人 / AI</p>
+        </div>
+      </div>
+      <div class="turn-pill" id="turnPill" aria-live="polite">红方行棋</div>
+    </header>
+
+    <main class="stage">
+      <div class="status-line" id="statusLine">请选择模式开始对局</div>
+      <div class="board-wrap" id="boardWrap">
+        <div class="board" id="board" role="grid" aria-label="象棋棋盘"></div>
+      </div>
+      <div class="hint" id="hint">点击己方棋子选中，再点目标位置走子</div>
+    </main>
+
+    <footer class="dock">
+      <div class="mode-row" role="group" aria-label="对战模式">
+        <button type="button" class="btn mode active" data-mode="pvp">双人对战</button>
+        <button type="button" class="btn mode" data-mode="ai">人机对战</button>
+      </div>
+      <div class="action-row">
+        <button type="button" class="btn" id="btnUndo" disabled>悔棋</button>
+        <button type="button" class="btn" id="btnRestart">再来一局</button>
+        <button type="button" class="btn ghost" id="btnTheme">深色/浅色</button>
+      </div>
+      <div class="ai-row" id="aiRow" hidden>
+        <label class="ai-label">AI 难度
+          <select id="aiDepth">
+            <option value="1">入门</option>
+            <option value="2" selected>普通</option>
+            <option value="3">困难</option>
+          </select>
+        </label>
+        <label class="ai-label side-label">你执
+          <select id="humanSide">
+            <option value="r" selected>红方</option>
+            <option value="b">黑方</option>
+          </select>
+        </label>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <h2 id="modalTitle">对局结束</h2>
+      <p id="modalMsg"></p>
+      <button type="button" class="btn primary" id="modalOk">知道了</button>
+    </div>
+  </div>
+
+  <script src="js/chess.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').catch(function () {});
+    }
+  </script>
+</body>
+</html>
