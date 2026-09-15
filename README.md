@@ -2,6 +2,18 @@
 
 手机优先的网页版中国象棋：双人对战 / 简单 AI，可安装为 PWA。
 
+## 手机安装 APK
+
+在手机浏览器打开下载页（会自动开始下载）：
+
+https://zyf-coder.github.io/board-games/download.html
+
+或直接下载安装包：
+
+https://github.com/zyf-coder/board-games/raw/main/releases/board-games-v1.0.0.apk
+
+安装前请允许「安装未知应用」。
+
 ## 本地运行
 
 ```bash
